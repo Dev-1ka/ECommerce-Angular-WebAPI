@@ -1,0 +1,114 @@
+<div class="auth-container">
+
+  <div class="auth-card">
+
+    <h2 class="title">
+      Create Account
+    </h2>
+
+    <p class="subtitle">
+      Register to continue
+    </p>
+
+    <form
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit()"
+    >
+
+      <div class="mb-3">
+
+        <label class="form-label">
+          Full Name
+        </label>
+
+        <input
+          type="text"
+          class="form-control"
+          formControlName="fullName"
+          placeholder="Enter your full name"
+        >
+
+        <small
+          class="text-danger"
+          *ngIf="
+            registerForm.get('fullName')?.touched &&
+            registerForm.get('fullName')?.invalid
+          "
+        >
+          Full name is required
+        </small>
+
+      </div>
+
+      <div class="mb-3">
+
+        <label class="form-label">
+          Email
+        </label>
+
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter your email"
+        >
+
+        <small
+          class="text-danger"
+          *ngIf="
+            registerForm.get('email')?.touched &&
+            registerForm.get('email')?.invalid
+          "
+        >
+          Valid email is required
+        </small>
+
+      </div>
+
+      <div class="mb-3">
+
+        <label class="form-label">
+          Password
+        </label>
+
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Create password"
+        >
+
+        <small
+          class="text-danger"
+          *ngIf="
+            registerForm.get('password')?.touched &&
+            registerForm.get('password')?.invalid
+          "
+        >
+          Password must be minimum 6 characters
+        </small>
+
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary w-100 register-btn"
+      >
+        Register
+      </button>
+
+    </form>
+
+    <p class="bottom-text">
+
+      Already have an account?
+
+      <a routerLink="/login">
+        Login
+      </a>
+
+    </p>
+
+  </div>
+
+</div>

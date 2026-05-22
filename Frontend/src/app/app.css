@@ -1,0 +1,25 @@
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+
+  background-color: #f8f5ff;
+
+  color: #2d1b46;
+
+}
+
+a {
+
+  text-decoration: none;
+
+}
+
+button {
+
+  transition: 0.3s ease;
+
+}

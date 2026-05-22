@@ -1,0 +1,289 @@
+.dashboard-layout {
+
+  display: flex;
+
+  min-height: 100vh;
+
+  background-color: #f9fafb;
+
+}
+
+
+.sidebar {
+
+  width: 260px;
+
+  background-color: #111111;
+
+  padding: 40px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.sidebar-logo {
+
+  margin-bottom: 50px;
+
+}
+
+.sidebar-logo h2 {
+
+  color: white;
+
+  font-size: 2rem;
+
+}
+
+.sidebar-menu {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+.sidebar-menu button {
+
+  border: none;
+
+  background: transparent;
+
+  color: #d1d5db;
+
+  text-align: left;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+
+}
+
+.sidebar-menu button:hover {
+
+  background-color: #1f2937;
+
+  color: white;
+
+}
+
+.sidebar-menu .active {
+
+  background-color: white;
+
+  color: black;
+
+  font-weight: 600;
+
+}
+
+
+
+.dashboard-content {
+
+  flex: 1;
+
+  padding: 50px;
+
+}
+
+.content-header {
+
+  margin-bottom: 35px;
+
+}
+
+.content-header h1 {
+
+  font-size: 2.5rem;
+
+  color: #111111;
+
+}
+
+.content-header p {
+
+  color: #6b7280;
+
+  margin-top: 8px;
+
+}
+
+
+
+.create-card {
+
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.06);
+
+  max-width: 700px;
+
+}
+
+.form-group {
+
+  margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+}
+
+.form-group input,
+.form-group textarea {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  border: 1px solid #d1d5db;
+
+}
+
+.form-row {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+}
+
+.submit-btn {
+
+  width: 100%;
+
+  border: none;
+
+  background-color: black;
+
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 14px;
+
+  margin-top: 10px;
+
+  font-weight: 600;
+
+}
+
+
+
+.products-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 25px;
+
+}
+
+.product-card {
+
+  background-color: white;
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.06);
+
+}
+
+.product-card h2 {
+
+  margin-bottom: 10px;
+
+}
+
+.product-card p {
+
+  color: #6b7280;
+
+  line-height: 1.5;
+
+}
+
+.product-info {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+}
+
+.product-info span {
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+}
+
+.product-actions {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+}
+
+.edit-btn,
+.delete-btn {
+
+  flex: 1;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  color: white;
+
+}
+
+.edit-btn {
+
+  background-color: black;
+
+}
+
+.delete-btn {
+
+  background-color: #af0a0a;
+
+}

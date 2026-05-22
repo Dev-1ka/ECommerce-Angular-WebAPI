@@ -1,0 +1,85 @@
+<div class="inventory-page">
+
+  <div class="header">
+
+    <h1>
+      Inventory Management
+    </h1>
+
+    <p>
+      Manage product stock
+    </p>
+
+  </div>
+
+  <div class="inventory-grid">
+
+    <div
+      class="inventory-card"
+
+      *ngFor="
+        let item
+        of inventory
+      "
+    >
+
+      <h2>
+        {{ item.productName }}
+      </h2>
+
+      <div class="field">
+
+        <label>
+          Available Stock
+        </label>
+
+        <input
+          type="number"
+          [(ngModel)]="
+            item.availableStock
+          "
+        >
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Low Stock Threshold
+        </label>
+
+        <input
+          type="number"
+          [(ngModel)]="
+            item.lowStockThreshold
+          "
+        >
+
+      </div>
+      <div
+        class="low-stock"
+
+        *ngIf="
+          item.availableStock <=
+          item.lowStockThreshold
+        "
+      >
+
+        Low Stock Alert
+
+      </div>
+
+      <button
+        (click)="updateStock(item)"
+      >
+
+        Update Inventory
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
